@@ -1,0 +1,76 @@
+PS C:\Users\HD\Desktop\AI USING .PY> python solution.py
+[*] Generating synthetic HousePricePrediction dataset for testing...
+[*] 'HousePricePrediction.csv' created successfully in your folder!
+
+--- Task 1: Dataset Loading (First 10 Rows) ---
+   Id  LotSize  Rooms       Type   Price
+0   1   8770.0    5.0  Apartment  265379
+1   2   2360.0    2.0      Villa  282069
+2   3   6890.0    4.0  Apartment   79320
+3   4   6691.0    3.0      Villa   84924
+4   5   7234.0    2.0  Townhouse  262792
+5   6      NaN    NaN  Apartment  483950
+6   7   1966.0    5.0      Villa  380260
+7   8   5926.0    2.0  Townhouse  221097
+8   9   7078.0    NaN  Townhouse   52159
+9  10   9822.0    5.0  Townhouse   98940
+
+--- Task 2: Data Exploration ---
+Shape of the dataset: (1000, 5)
+
+Data types of columns:
+Id           int64
+LotSize    float64
+Rooms      float64
+Type        object
+Price        int64
+dtype: object
+
+Summary statistics of numerical features:
+                Id      LotSize       Rooms         Price
+count  1000.000000   900.000000  900.000000    1000.00000
+mean    500.500000  5898.672222    3.527778  274480.07700
+std     288.819436  2373.404124    1.146793  129028.65185
+min       1.000000  1504.000000    2.000000   50215.00000
+25%     250.750000  3931.500000    2.750000  163725.25000
+50%     500.500000  6027.000000    3.000000  279067.00000
+75%     750.250000  7943.250000    5.000000  386754.75000
+max    1000.000000  9977.000000    5.000000  499813.00000
+
+--- Task 3: Data Cleaning ---
+Missing values per column before cleaning:
+Id           0
+LotSize    100
+Rooms      100
+Type       100
+Price        0
+dtype: int64
+
+Missing values after cleaning:
+Id         0
+LotSize    0
+Rooms      0
+Type       0
+Price      0
+dtype: int64
+
+--- Task 4: Feature Selection ---
+'Id' column removed successfully.
+
+--- Task 5: Data Preprocessing (Encoding) ---
+
+Processed Dataset Preview (First 5 Rows):
+   LotSize  Rooms   Price  Type_Apartment  Type_Townhouse  Type_Villa
+0   8770.0    5.0  265379            True           False       False
+1   2360.0    2.0  282069           False           False        True
+2   6890.0    4.0   79320            True           False       False
+3   6691.0    3.0   84924           False           False        True
+4   7234.0    2.0  262792           False            True       False
+PS C:\Users\HD\Desktop\AI USING .PY> 
+
+
+
+
+
+
+
